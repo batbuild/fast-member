@@ -9,9 +9,9 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FastMember.Tests", "FastMem
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{165A9D79-C307-45E9-A70E-826459FCFC10}"
 	ProjectSection(SolutionItems) = preProject
-		Nuget\FastMember.nuspec = Nuget\FastMember.nuspec
-		NugetSigned\FastMember.Signed.nuspec = NugetSigned\FastMember.Signed.nuspec
-		pack.cmd = pack.cmd
+		Build.bat = Build.bat
+		Build.fsx = Build.fsx
+		Nuget\FastMember.Android.nuspec = Nuget\FastMember.Android.nuspec
 	EndProjectSection
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FastMember_Net35", "FastMember_Net35\FastMember_Net35.csproj", "{7C5CF865-41CF-4E3E-BCAD-987872A23237}"
