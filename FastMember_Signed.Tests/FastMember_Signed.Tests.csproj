@@ -51,7 +51,7 @@
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\FastMember_Signed\FastMember_Signed.csproj">
-      <Project>{9d0d7e3b-4937-49cd-b288-f53f97d4268c}</Project>
+      <Project>{9D0D7E3B-4937-49CD-B288-F53F97D4268C}</Project>
       <Name>FastMember_Signed</Name>
     </ProjectReference>
   </ItemGroup>

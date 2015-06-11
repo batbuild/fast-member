@@ -68,7 +68,7 @@ namespace FastMember
                 return obj;
             }
         }
-#if !NO_DYNAMIC
+#if !NO_DYNAMIC  && !__ANDROID__
         sealed class DynamicAccessor : TypeAccessor
         {
             public static readonly DynamicAccessor Singleton = new DynamicAccessor();
@@ -81,7 +81,7 @@ namespace FastMember
         }
 #endif
 
-        private static AssemblyBuilder assembly;
+		private static AssemblyBuilder assembly;
         private static ModuleBuilder module;
         private static int counter;
 
@@ -256,15 +256,15 @@ namespace FastMember
             return true;
         }
         static TypeAccessor CreateNew(Type type, bool allowNonPublicAccessors)
-        {
-#if !NO_DYNAMIC
+		{
+#if !NO_DYNAMIC  && !__ANDROID__
             if (typeof(IDynamicMetaObjectProvider).IsAssignableFrom(type))
             {
                 return DynamicAccessor.Singleton;
             }
 #endif
 
-            PropertyInfo[] props = type.GetProperties(BindingFlags.Public | BindingFlags.Instance);
+			PropertyInfo[] props = type.GetProperties(BindingFlags.Public | BindingFlags.Instance);
             FieldInfo[] fields = type.GetFields(BindingFlags.Public | BindingFlags.Instance);
             Dictionary<string, int> map = new Dictionary<string, int>(StringComparer.Ordinal);
             List<MemberInfo> members = new List<MemberInfo>(props.Length + fields.Length);

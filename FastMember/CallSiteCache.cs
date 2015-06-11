@@ -1,11 +1,15 @@
 ﻿using System.Collections;
+
 using System.Runtime.CompilerServices;
 using System;
+#if !__ANDROID__
 using Microsoft.CSharp.RuntimeBinder;
-
+#endif
 namespace FastMember
 {
-    internal static class CallSiteCache
+#if !__ANDROID__
+
+	internal static class CallSiteCache
     {
         private static readonly Hashtable getters = new Hashtable(), setters = new Hashtable();
 
@@ -45,4 +49,5 @@ namespace FastMember
         }
         
     }
+#endif
 }

@@ -54,11 +54,11 @@ namespace FastMember
         public static ObjectAccessor Create(object target, bool allowNonPublicAccessors)
         {
             if (target == null) throw new ArgumentNullException("target");
-#if !NO_DYNAMIC
+#if !NO_DYNAMIC  && !__ANDROID__
             IDynamicMetaObjectProvider dlr = target as IDynamicMetaObjectProvider;
             if (dlr != null) return new DynamicWrapper(dlr); // use the DLR
 #endif
-            return new TypeAccessorWrapper(target, TypeAccessor.Create(target.GetType()));
+			return new TypeAccessorWrapper(target, TypeAccessor.Create(target.GetType()));
         }
         sealed class TypeAccessorWrapper : ObjectAccessor
         {
@@ -79,7 +79,7 @@ namespace FastMember
                 get { return target; }
             }
         }
-#if !NO_DYNAMIC
+#if !NO_DYNAMIC && !__ANDROID__
         sealed class DynamicWrapper : ObjectAccessor
         {
             private readonly IDynamicMetaObjectProvider target;
