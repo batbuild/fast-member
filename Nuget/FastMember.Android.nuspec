@@ -14,7 +14,8 @@
 		@dependencies@
 	</metadata>
     <files>
-        <file src="bin\Release\Android\FarseerDuality.dll" target="lib\MonoAndroid\FarseerDuality.dll" />
-        <file src="bin\Release\Android\FarseerDuality.pdb" target="lib\MonoAndroid\FarseerDuality.pdb" />
+        <file src="FastMember\bin\Release\FastMember.Android.dll" target="lib\MonoAndroid\FastMember.Android.dll" />
+        <file src="FastMember\bin\Release\FastMember.Android.pdb" target="lib\MonoAndroid\FastMember.Android.pdb" />
+        <file src="FastMember\bin\Release\FastMember.Android.dll.mdb" target="lib\MonoAndroid\FastMember.Android.dll.mdb" />
     </files>
 </package>

@@ -45,7 +45,7 @@ Target "Build" (fun _ ->
             Verbosity = Some(Normal)            
             Properties =
                 [            
-                    "Configuration", buildMode                    
+                    "Configuration", "Release"                    
                 ]
         }
     build setParams "./FastMember.Android.sln"    

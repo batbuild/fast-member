@@ -9,9 +9,9 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-[assembly: global::Android.Runtime.ResourceDesignerAttribute("ClassLibrary1.Resource", IsApplication=false)]
+[assembly: global::Android.Runtime.ResourceDesignerAttribute("FastMember.Resource", IsApplication=false)]
 
-namespace ClassLibrary1
+namespace FastMember
 {
 	
 	

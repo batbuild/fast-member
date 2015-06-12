@@ -26,8 +26,8 @@ namespace TestApp
 		
 		public static void UpdateIdValues()
 		{
-			global::ClassLibrary1.Resource.String.ApplicationName = global::TestApp.Resource.String.ApplicationName;
-			global::ClassLibrary1.Resource.String.Hello = global::TestApp.Resource.String.Hello;
+			global::FastMember.Resource.String.ApplicationName = global::TestApp.Resource.String.ApplicationName;
+			global::FastMember.Resource.String.Hello = global::TestApp.Resource.String.Hello;
 		}
 		
 		public partial class Attribute
